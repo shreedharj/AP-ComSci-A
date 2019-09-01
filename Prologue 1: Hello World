@@ -1,0 +1,22 @@
+package com.shree.apcs.units;
+
+/**
+ * @author shree
+ *
+ */
+public class Prologue1 {
+
+	public Prologue1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int x  = 16;
+		System.out.println("Hello World! My name is Shreedhar, aka Shredder.");
+		System.out.println("I am " + x + " years old");
+		System.out.println("I plan to study Aerospace Engineering and Mechanical Engineering being my backup in college");
+		System.out.println("After college, I want to work at Nasa or Spacex.");
+	}
+}
