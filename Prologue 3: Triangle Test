@@ -1,0 +1,55 @@
+package com.shree.apcs.units;
+
+import java.util.Scanner;
+
+/**
+ * @author shree
+ *
+ */
+public class Prologue3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner reader = new Scanner(System.in);
+
+		System.out.println("Enter length 1: ");
+		double a = reader.nextDouble();
+		System.out.println("Enter length 2: ");
+		double b = reader.nextDouble();
+		System.out.println("Enter length 3: ");
+		double c = reader.nextDouble();
+		double temp;
+		reader.close();
+
+		// double epsilon = 1E-10;
+		if (a > b) {
+			temp = a;
+			a = b;
+			b = temp;
+		}
+		if (b > c) {
+			temp = b;
+			b = c;
+			c = temp;
+		}
+		System.out.println("You entered: " + a + ", " + b + ", " + c);
+		System.out.println();
+		if ((a + b) > c) {
+			System.out.println(a + ", " + b + ", " + c + ", " + " forms a triangle!");
+			System.out.println();
+			if (a * a + b * b == c * c) {
+				System.out.println(a + ", " + b + ", " + c + ", " + " is a right triangle!");
+			}
+			if (a * a + b * b > c * c) {
+				System.out.println(a + ", " + b + ", " + c + ", " + " is an acute triangle!");
+			}
+			if (a * a + b * b < c * c) {
+				System.out.println(a + ", " + b + ", " + c + ", " + " is an obtuse triangle!");
+			}
+		} else {
+			System.out.println(a + ", " + b + ", " + c + ", " + " does not form a triangle!");
+			System.out.println();
+		}
+	}
+}
