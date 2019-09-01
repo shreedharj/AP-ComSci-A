@@ -1,0 +1,47 @@
+package com.shree.apcs.units;
+
+import java.util.Scanner;
+
+/**
+ * @author shree
+ *
+ */
+public class Prologue4 {
+
+	public Prologue4() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner reader = new Scanner(System.in);
+
+		System.out.println("Enter *a* from ax^2+bx+c: ");
+		double a = reader.nextDouble();
+		System.out.println("Enter *b* from ax^2+bx+c: ");
+		double b = reader.nextDouble();
+		System.out.println("Enter *c* from ax^2+bx+c: ");
+		double c = reader.nextDouble();
+		System.out.println("You entered: " + a + ", " + b + ", " + c);
+		System.out.println();
+		double x1, x2, xreal, ximag;
+		reader.close();
+
+		boolean realsol = false;
+		if (b * b - 4 * a * c >= 0) {
+			realsol = true;
+		}
+
+		if (realsol == true) {
+			x1 = -b / (2 * a) + Math.sqrt(b * b - 4 * a * c) / (2 * a);
+			x2 = -b / (2 * a) - Math.sqrt(b * b - 4 * a * c) / (2 * a);
+			System.out.println("x1 = " + x1 + " x2 = " + x2);
+		} else {
+			xreal = -b / (2 * a);
+			ximag = Math.abs(Math.sqrt(4 * a * b * c - b * b) / (2 * a));
+			System.out.println("x1 = " + xreal + "+" + ximag + "i x2 = " + xreal + "-" + ximag + "i");
+
+		}
+	}
+}
