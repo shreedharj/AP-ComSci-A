@@ -1,0 +1,51 @@
+package com.shree.apcs.units;
+
+import java.util.Scanner;
+
+/**
+ * @author shree
+ *
+ */
+public class Prologue2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner reader = new Scanner(System.in); 
+		System.out.println("Enter 1 for C to F or 2 for F to C: ");
+		int n = reader.nextInt();
+		if (n == 1) {
+			System.out.println("Enter a value of Celcius to be converted: ");
+			int c1 = reader.nextInt();
+			temp_conversion(c1, true);
+		} else if (n >= 2) {
+			System.out.println("Enter a value of Fahrenheit to be converted: ");
+			int c2 = reader.nextInt();
+			temp_conversion(c2, false);
+		} else if (n <= 0) {
+			System.out.println("You entered a temperature at or below absolute zero. A conversion would not be scientifically valid.");
+		}	reader.close();
+	}
+	
+	public static float f2c (float f) {
+		float c = (f-32) * 5/9;
+		System.out.println(f + " F is equal to " + c + " C.");
+		return c;		
+	}
+	
+	public static float c2f (float c) {
+		float f = c * 9/5 + 32;
+		System.out.println(c + " C is equal to " + f + " F.");
+		return f;		
+	}
+	
+	public static float temp_conversion (float t, boolean c2f) {
+		float temp = 0;
+		if (c2f == true) {
+			temp = c2f (t);
+		} else {
+			temp = f2c (t);
+		}
+		return temp;
+	}
+}
